@@ -25,6 +25,7 @@ public abstract class PropertiesUtil {
                 int equalPos = tmp.indexOf('=');
                 properties.addProperty(tmp.substring(0, equalPos), tmp.substring(equalPos + 1, tmp.length()));
             }
+            reader.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
