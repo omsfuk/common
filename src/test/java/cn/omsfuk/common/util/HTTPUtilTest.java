@@ -13,5 +13,6 @@ public class HTTPUtilTest {
     public void get() {
         String ans = HTTPUtil.get("https://www.baidu.com", null);
         Assert.assertNotNull(ans);
+        Assert.assertTrue(ans.contains("baidu"));
     }
 }
